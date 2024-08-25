@@ -4,15 +4,25 @@
     margin: 0;
 }
 
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
 body{
     background:#fff
 }
 
 .navbar{
     background: rgb(229, 171, 63);
-    font-family: cursive;
+    font-family: Arial, Helvetica, sans-serif;
     padding-left: 15px;
     padding-right: 15px;
+    margin: 0%;
+    padding: 0%;
 }
 
 .navdiv{
@@ -21,10 +31,10 @@ body{
     justify-content: space-between;
 }
 
-.logo a{
-    font-size: 35px;
-    font-weight: 600;
-    color: rgb(255, 255, 255);
+.logo {
+    height:100px;
+    width: 100px;
+    margin-left: 25px;
 }
 
 ul{
@@ -38,8 +48,13 @@ li{
 
 li a{
     color:white;
-    font-size: 20px;
+    font-size: 26px;
     margin-right: 25px;
+    text-decoration: none;
+}
+
+li a:hover{
+    color: aliceblue;
 }
 
 button{
@@ -48,6 +63,8 @@ button{
     margin-left: 10px;
     padding: 10px;
     width: 90px;
+    border-color: aliceblue;
+    cursor: pointer;
 }
 
 button a{
