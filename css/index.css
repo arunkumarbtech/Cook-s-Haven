@@ -246,7 +246,7 @@ button a{
     display: flex;
 }
 .works-image {
-    margin-top: 50px;
+    margin-top: 70px;
     margin-left: 10px;
     width: 65%;
     /* transform: translateX(-100%); */
@@ -277,7 +277,7 @@ button a{
     left: 0;
 }
 .feedback{
-    margin-top: 50px;
+    margin-top: 70px;
     margin-right: 20px;
     width: 35%;
     display: flex;
