@@ -69,12 +69,8 @@ button {
     border-color: aliceblue;
     cursor: pointer;
     border: 1px solid;
-}
-
-button a {
     font-weight: bold;
     font-size: 17px;
-    color:inherit;
 }
 
 .place-order {
@@ -87,7 +83,7 @@ button a {
 
 button.place-order:hover {
     background:linear-gradient(to right, #8bffeb, #f29d01e8);
-    color: aliceblue;
+    color:white;
 }
 
 

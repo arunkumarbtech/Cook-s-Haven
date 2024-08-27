@@ -76,3 +76,11 @@ document.addEventListener("DOMContentLoaded", () => {
 	allAnimatedElements.forEach((element) => observer.observe(element));
 
 });
+
+function openPlaceOrderPage(){
+  window.location.href = 'orderpage.html'
+}
+
+function openLoginPage(){
+  window.location.href = 'login.html'
+}
