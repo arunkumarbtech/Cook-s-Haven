@@ -10,8 +10,7 @@ a{
 
 a:hover{
     text-decoration: none;
-    padding: 0;
-    margin: 0;
+   
 }
 
 /* a{
@@ -27,7 +26,7 @@ body{
 }
 
 .navbar{
-    background: rgb(229, 171, 63);
+    background: linear-gradient(to right, #8bffeb, #f29d01e8);
     /* font-family: cursive; */
     padding-left: 15px;
     padding-right: 15px;
@@ -58,13 +57,16 @@ li{
 
 li a{
     color:white;
-    font-size: 26px;
+    font-size: 20px;
+    padding: 10px;
     margin-right: 25px;
+    font-weight: 600;
     text-decoration: none;
 }
 
-li a:hover{
-    color: aliceblue;
+a:hover{
+    background-color: aliceblue;
+    border-radius: 35px;
 }
 
 button{
@@ -75,12 +77,27 @@ button{
     width: 90px;
     border-color: aliceblue;
     cursor: pointer;
+    border-radius: 25px;
 }
 
 button a{
     font-weight: bold;
     color: rgb(0, 0, 0);
     font-size: 15px;
+}
+
+.place-order {
+    /* width: fit-content; */
+    width: 200px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button.place-order:hover {
+    background:linear-gradient(to right, #8bffeb, #f29d01e8);
+    /* color: aliceblue; */
 }
 /* .header-slider a {
     position: absolute;
@@ -413,6 +430,8 @@ button a{
   }
   #social-icon__link:hover {
     transform: translateY(-10px);
+    text-decoration: none;
+    color: #717171;
   }
   
   .menu__link {
