@@ -12,8 +12,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
         integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+ <link rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="/css/index.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
 </head>
 
@@ -26,11 +35,134 @@
                 <li><a href="#">About</a></li>
                 <li><a href="#">Join Us</a></li>
                 <li><a href="#">Contact</a></li>
-                <button><a href="#">Login</a></button>
-                <button class="place-order"><a href="/html/orderpage.html">Place Order <i class="fa-solid fa-arrow-right"></i></a></button>
+                <button class="place-order" onclick="openLoginPage()">Login</button>
+                <button class="place-order" onclick="openPlaceOrderPage()" >Place Order <i class="fa-solid fa-arrow-right"></i></button>
             </ul>
         </div>
     </nav>
+    <div class="header-slider">
+        
+     <div class="slideshow-container">
+            <div class="image-slider">
+               
+              <img src="/images/header-1.png" class="header-img" alt="">
+           
+              <div class="slider-caption">
+                  <h1>Bringing the warmth of  </h1>
+                  <span>a home-cooked meal </span>
+                  <h1>to your table </h1>  
+                </div>
+             </div>
+             <div class="image-slider">
+                <img src="/images/header-2.jpeg" class="header-img" alt="">
+                <div class="slider-caption">
+                    <h1>From our kitchen </h1>
+                      <span>To Yours </span>
+                      <h1>Meals made with heart </h1>  
+                    </div>
+                 </div>
+                 <div class="image-slider">
+                    <img src="/images/header-3.jpg" class="header-img" alt="">
+                    <div class="slider-caption">
+                        <h1>Say No to</h1>
+                              <span>Processed Meals </span>
+                              <h1>and Yes  to home-cooked feasts </h1> 
+                         
+                    </div>
+                 </div>
+                     <div class="image-slider">
+                        <img src="/images/header-4.jpg" class="header-img" alt="">
+                        <div class="slider-caption">
+                            <h1>Savor the comfort of</h1>
+                            <span>Homemade meals </span>
+                            <h1>Delivered to your door</h1>
+                        </div>
+                    </div>
+                         <div class="image-slider">
+                            <img src="/images/header-5.jpg" class="header-img" alt="">
+                            <div class="slider-caption">
+                                <h1>Indulge in the essence of </h1>
+                                  <span>Home-cooked meals, </span>
+                                  <h1>anytime, anywhere </h1>  
+                            </div>
+                        </div>
+                             <div class="image-slider">
+                                <img src="/images/header-6.jpeg" class="header-img" alt="">
+                                <div class="slider-caption">
+                                    <h1>Connecting you to </h1>
+                                      <span>home cooks for a truly  </span>
+                                      <h1>authentic dining experience </h1>  
+                                    </div>
+                                 </div>
+        <button id="arrow" class="control-prev">&#10094;</button>
+        <button id="arrow" class="control-next">&#10095;</button>
+        <div class="dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+            <span class="dot" data-slide="3"></span>
+            <span class="dot" data-slide="4"></span>
+            <span class="dot" data-slide="5"></span>
+     </div>
+    </div>
+    </div>
+</div>
+
+       <div class="second-slider">
+        <div class="works-image animate">
+             <img src="/images/works im.png"  class="image" alt="how cooks haven works" >
+        </div>
+       <div class="feedback animate">
+        <h1>Give us Your feedback</h1>
+        <h1>Ask us Anything</h1>
+        <form>
+                <label for="name"></label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                <label for="email"></label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+               <label for="phone"></label>
+              <input type="tel" id="phone" class="form-control" placeholder="Enter your mobile number">
+                <label for="comment"></label>
+                <textarea class="form-textarea" id="comment" rows="5" placeholder="Ask us Anything or Give you feedback"></textarea>
+                <button type="submit" class="feedback-btn">Submit</button>
+        </form>
+       </div>
+    </div>
+
+    <footer class="footer">
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+          <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-icon">
+          <li class="social-icon__item"><a class="fab fa-facebook" id="social-icon__link"  href="#">
+              <ion-icon name="logo-facbook"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="fab fa-twitter" id="social-icon__link"  href="#">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="fab fa-linkedin" id="social-icon__link"  href="#">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="fab fa-instagram"  id="social-icon__link"  href="#">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a></li>
+        </ul>
+        <ul class="menu">
+          <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+    
+        </ul>
+        <p>&copy;2024 @Copyright by Aswin,Arun,Christy,Aarthi | All Rights Reserved</p>
+      </footer>
+
+
+    
     <script src="/js/index.js" type="text/javascript"></script>
 </body>
 
