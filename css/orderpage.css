@@ -21,6 +21,11 @@ body {
     padding-right: 15px;
     margin: 0%;
     padding: 0%;
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 1000;
 }
 
 .navdiv {
@@ -35,7 +40,7 @@ body {
     margin-left: 25px;
 }
 
-.sort-list{
+.sort-list {
     display: inline-flex;
 }
 
@@ -48,33 +53,144 @@ body {
 
 }
 
-.navbottom{
+.navbottom {
     display: flex;
     justify-content: center;
     margin-left: 10%;
     margin-right: 10%;
 }
 
-.sort-img{
+.sort-img {
     height: 180px;
     width: 144px;
 }
 
-.horizontal-line{
+.horizontal-line {
     border: none;
     height: 1px;
-    background-color: #e0e0e0; /* Light gray color */
-    margin: 20px 0; /* Adjust as needed */
+    background-color: #e0e0e0;
+    /* Light gray color */
+    margin: 20px 0;
+    /* Adjust as needed */
 }
 
-.page-margin{
+.page-margin {
     margin-left: 5%;
     margin-right: 5%;
+    margin-top: 70px;
 }
 
-.heading{
+.heading {
     font-size: 25px;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: #656565;
 
+}
+
+.search-col {
+    display: flex;
+    justify-content: center;
+}
+
+.search-col input {
+    width: 547px;
+    font-size: 20px;
+}
+
+.search-box input {
+    border: none;
+    margin-left: 1px;
+    padding-left: 20px;
+    padding-top: 3px;
+    outline: none;
+}
+
+.search-box {
+    border: 1px solid grey;
+    border-radius: 35px;
+    margin: 10px;
+    padding: 8px;
+}
+
+.search-box button {
+    border: none;
+    background-color: rgb(255, 218, 8);
+    border-radius: 20px;
+    width: 110px;
+    height: 37px;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    color: white;
+    font-size: 15px;
+    /* cursor: pointer; */
+}
+
+.search-box button span {
+    padding-left: 4px;
+}
+
+.south-img img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+    transition: transform 0.5s ease;
+}
+
+.flex2 {
+    display: flex;
+    justify-content: space-around;
+    transition: transform 0.5s ease;
+}
+
+.south-img {
+    text-align: center;
+    margin: 15px;
+}
+
+.south-img-word {
+    padding-top: 10px;
+}
+
+.gallery-container{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.gallary-wrapper{
+    overflow: hidden;
+}
+
+.nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 25%;
+    width: 50px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.left-nav {
+    left: 1px;
+}
+
+.right-nav {
+    right: 1px;
+}
+
+.body-margin{
+    margin-left: 10%;
+    margin-right: 10%;
 }
