@@ -44,7 +44,7 @@ body{
 }
 
 .container button{
-    background-color: #a82d2d;
+    background:linear-gradient(to right, #8bffeb, #f29d01e8);
     color: #fff;
     border: 1px solid transparent;
     border-radius: 8px;
@@ -159,7 +159,7 @@ body{
 .toggle{
     background-color: #a82d2d;
     height: 100%;
-    background: linear-gradient(to right, #c05c5c, #a82d2d);
+    background:linear-gradient(to bottom, #8bffeb, #f29d01e8);
     color: #fff;
     position: relative;
     left: -100%;
