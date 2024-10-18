@@ -59,9 +59,24 @@ document.querySelectorAll('.gallery-container').forEach(container => {
 
 
 const scrollcontainer = document.querySelectorAll(".cart-list");
-for(const item of scrollcontainer) {
-    item.addEventListener('wheel',(evt)=> {
+for (const item of scrollcontainer) {
+    item.addEventListener('wheel', (evt) => {
         evt.preventDefault();
         item.scrollLeft += evt.deltaY;
- } );
+    });
 }
+
+// Get the input field and button
+const mobileNumberInput = document.getElementById('phonenumber');
+const getOtpBtn = document.getElementById('getotp');
+
+// Function to enable or disable the button based on input length
+mobileNumberInput.addEventListener('input', function () {
+    const isValid = mobileNumberInput.value.length === 10;
+    getOtpBtn.disabled = !isValid;
+});
+
+function openLogin(){
+    window.location.href = '/html/login.html';
+}
+

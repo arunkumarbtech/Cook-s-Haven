@@ -502,3 +502,127 @@ button.place-order:hover {
       background-positon-x: 0px;
     }
   }
+
+  .modal-dialog{
+    width: 450px;
+    height: 800px;
+}
+
+.modal-content{
+    border-radius: 20px;
+    padding: 30px;
+    padding-bottom: 0%;
+    background-color: white;
+    color: black;
+}
+
+.modal-header{
+    align-items: flex-start !important;
+}
+
+.modal-body{
+    position: relative;
+}
+
+.form-controls{
+    width: 100%;
+    position: relative;
+    letter-spacing: 2px;
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+
+#otp{
+    width: 77%;
+}
+
+#otp-label{
+    display: flex;
+}
+
+.register-btn .form-controls{
+    margin: 0%;
+    background-color: #fdb332;
+    color:white
+}
+
+.getotp{
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 6px;
+    float: right;
+    color: white;
+    margin-left: 5px;
+    border: 1px solid #ccc;
+    background-color: #fdb332;
+}
+
+.getotp button{
+    font-size: 15px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 65px;
+    background-color: #fdb332;
+    color: white;
+
+}
+
+
+.register-login{
+    text-align: center;
+}
+
+.register-login h4{
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+}
+
+.dropdown-menu{
+    border-radius: 20px;
+  }
+
+ .dropdown-item{
+    margin-right: auto;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+ .dropdown-menu li a{
+    font-weight: 500;
+ }
