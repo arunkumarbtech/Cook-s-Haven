@@ -239,22 +239,21 @@ let decrement = (id) => {
   const existingItem = basket.find((item) => (item.id) === id);
   const addButton = document.querySelector('.add-btn');
   const cartControls =document.querySelector('.controls')
-  if (existingItem) {
-    if (existingItem.item === 0) {
+   
+    if (existingItem.item === 1) {
       addButton.style.display = 'flex';
       cartControls.style.display = 'none';  
     } else {
       existingItem.item -= 1;
     }
-  }
- 
+
 
   calculation();
   let search = basket.find((x) => (x.id) === id) || [];
   const countElement = document.querySelector(`#${id} .count`);
   countElement.textContent = existingItem ? existingItem.item :  1;
 
-basket = basket.filter((x)=>x.item !==0);
+  basket = basket.filter((x)=>x.item !==0);
 
   localStorage.setItem("data", JSON.stringify(basket));
 };
