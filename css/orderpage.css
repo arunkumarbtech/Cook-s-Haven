@@ -74,10 +74,7 @@ button {
     font-weight: bold;
     font-size: 17px;
 }
-button:hover {
-    background:linear-gradient(to right, #8bffeb, #f29d01e8);
-    color:white;
-}
+
 .sort-list {
     display: inline-flex;
 }
@@ -151,7 +148,7 @@ button:hover {
 
 .search-box button {
     border: none;
-    background-color: rgb(255, 218, 8);
+    background-color: #fdb332;
     border-radius: 20px;
     width: 110px;
     height: 37px;
@@ -423,3 +420,117 @@ background-color: rgb(19, 231, 19);
       background-positon-x: 0px;
     }
   }
+
+  .dropdown-menu{
+    border-radius: 20px;
+  }
+
+ .dropdown-item{
+    margin-right: auto;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+ .dropdown-menu li a{
+    font-weight: 500;
+ }
+
+ /* Close Button */
+ .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+}
+
+/* CSS for register modal */
+
+.modal-dialog{
+    width: 450px;
+    height: 800px;
+}
+
+.modal-content{
+    border-radius: 20px;
+    padding: 30px;
+    padding-bottom: 0%;
+    background-color: white;
+    color: black;
+}
+
+.modal-header{
+    align-items: flex-start !important;
+}
+
+.modal-body{
+    position: relative;
+}
+
+.form-control{
+    width: 100%;
+    position: relative;
+    letter-spacing: 2px;
+}
+
+#otp{
+    width: 77%;
+}
+
+#otp-label{
+    display: flex;
+}
+
+.register-btn .form-control{
+    margin: 0%;
+    background-color: #fdb332;
+    color:white
+}
+
+.getotp{
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 6px;
+    float: right;
+    color: white;
+    margin-left: 5px;
+    border: 1px solid #ccc;
+    background-color: #fdb332;
+}
+
+.getotp button{
+    font-size: 15px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 65px;
+    background-color: #fdb332;
+    color: white;
+
+}
+
+
+.register-login{
+    text-align: center;
+}
+
+.register-login h4{
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+button.login:hover {
+    background:linear-gradient(to right, #8bffeb, #f29d01e8);
+    color:white;
+}
