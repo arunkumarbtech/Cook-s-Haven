@@ -182,7 +182,7 @@ for(const item of scrollcontainer) {
 
 // Select all cart items
 const cartItems = document.querySelectorAll('.cart-item');
-let basket =JSON.parse(localStorage.getItem("data")) || [];
+let basket =JSON.parse(localStorage.getItem("data")) || {};
 cartItems.forEach((item) => {
   const addButton = item.querySelector('.add-btn');
   const cartControls = item.querySelector('.controls');
@@ -201,18 +201,20 @@ cartItems.forEach((item) => {
   const existingItem = basket.find((item) => (item.id) === id);
  
   addButton.addEventListener('click', () => {
+   
+
     addButton.style.display = 'none';
     cartControls.style.display = 'flex';
-    increment(id); // Call increment function
-
-   
+   increment(id);
   });
 
-  addIcon.addEventListener('click', () => {
+  addIcon.addEventListener('click', () => { 
     increment(id); // Call increment function
+    // event.stopPropagation();
   });
 
   removeIcon.addEventListener('click', () => {
+    // stopPropagation();
     decrement(id); // Call decrement function
 
   });
@@ -233,14 +235,21 @@ let increment = (id) => {
   calculation();
   const countElement = document.querySelector(`#${id} .count`);
   countElement.textContent = existingItem ? existingItem.item : 1;
+
+
 };
 
 let decrement = (id) => {
   const existingItem = basket.find((item) => (item.id) === id);
-  const addButton = document.querySelector('.add-btn');
-  const cartControls =document.querySelector('.controls')
+  // const addButton = document.querySelector('.add-btn');
+  // const cartControls =document.querySelector('.controls');
+  const addButton = document.querySelector(`#${id} .add-btn`);
+  const cartControls = document.querySelector(`#${id} .controls`);
+
   if (existingItem) {
-    if (existingItem.item === 0) {
+    if (existingItem.item === 1) {
+      basket = basket.filter((item) => (item.id) !== id);
+
       addButton.style.display = 'flex';
       cartControls.style.display = 'none';  
     } else {
@@ -250,11 +259,11 @@ let decrement = (id) => {
  
 
   calculation();
-  let search = basket.find((x) => (x.id) === id) || [];
+  // let search = basket.find((x) => (x.id) === id) || [];
   const countElement = document.querySelector(`#${id} .count`);
   countElement.textContent = existingItem ? existingItem.item :  1;
 
-basket = basket.filter((x)=>x.item !==0);
+// basket = basket.filter((x)=>x.item !==0);
 
   localStorage.setItem("data", JSON.stringify(basket));
 };
