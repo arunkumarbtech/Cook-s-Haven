@@ -256,7 +256,6 @@ let decrement = (id) => {
       existingItem.item -= 1;
     }
   }
- 
 
   calculation();
   // let search = basket.find((x) => (x.id) === id) || [];

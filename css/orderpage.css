@@ -286,7 +286,7 @@ li a:hover {
 .cart-item:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
 }
-.cart-item img{
+.cart-image-item{
     width: 200px;
    height: 200px;
    /* padding: 5px; */
@@ -367,8 +367,8 @@ border-radius: 20px;
 
 /* Styling for the remove and add icons */
 .remove-icon, .add-icon {
-    width: 30px !important  ; /* Adjust size of the icons */
-    height: 30px  !important ;
+    width: 30px   ; /* Adjust size of the icons */
+    height: 30px   ;
     cursor: pointer;  /* Pointer cursor to indicate it's clickable */
      /* Add space between the icons and the count */
     transition: transform 0.2s ease;  /* Smooth scale effect on hover */
@@ -384,7 +384,7 @@ border-radius: 20px;
 .count {
     font-size: 25px;  /* Font size for the count number */
     font-weight: 600;
-   padding-top: 6px;
+    padding-top: 7px;
     color: #333;  /* Dark color for contrast */
     /* margin-top: 10px; */
 }
