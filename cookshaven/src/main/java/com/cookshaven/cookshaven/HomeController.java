@@ -14,7 +14,7 @@ public class HomeController {
         return "login";
     }
 
-    @GetMapping("/order")
+    @GetMapping("/orderpage")
     public String showOrderPage(){
         return "orderpage";
     }
