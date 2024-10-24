@@ -78,11 +78,11 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function openPlaceOrderPage() {
-  window.location.href = 'orderpage.html'
+  window.location.href = '/orderpage'
 }
 
 function openLoginPage() {
-  window.location.href = 'login.html'
+  window.location.href = '/login'
 }
 
 // Get the input field and button
