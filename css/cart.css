@@ -92,8 +92,35 @@ li a:hover {
 
 .cart-title{
     display: grid;
-    grid-template-columns: px 50px 60px 50px 60px 70px;
+    grid-template-columns: 200px 200px 200px 200px 200px 200px;
     align-items: center;
-    font-size: max(1vw,12px);
+    font-size: 18px;
     color: grey;
+    margin-top: 150px;
+    margin-left: 5%;
+    margin-right: 5%;
+  
+}
+
+.carts{
+   
+}
+
+.button-wrapper{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.orderBtn{
+    padding: 6px;
+    background-color: #212529;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.emptyText{
+    margin-top: 150px;
+    text-align: center;
+    margin-bottom: 20px;
 }
