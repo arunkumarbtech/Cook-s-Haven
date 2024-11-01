@@ -2,6 +2,7 @@
     text-decoration: none;
     padding: 0;
     margin: 0;
+   
 }
 
 a {
@@ -36,8 +37,8 @@ body {
 }
 
 .logo {
-    height: 75px;
-    width: 75px;
+    height: 100px;
+    width: 100px;
     margin-left: 25px;
 }
 
@@ -163,12 +164,11 @@ button.place-order:hover {
     
 }
 .slideshow-container {
-    overflow: hidden;
     display: flex;
     flex-direction:row ;
     /* width: 100%; */
     /* transition: transform 0.5s ease-in-out; */
-
+   
 }
 .image-slider{
     display: flex;
@@ -184,7 +184,7 @@ button.place-order:hover {
 .header-img{
     
    margin-left: 100px;
-   margin-top: 100px;
+   margin-top: 150px;
    margin-bottom: 10px;
   width: 400px;
   height: 400px;
@@ -196,9 +196,10 @@ button.place-order:hover {
 /* .slideshow-container .image-slider::-webkit-scrollbar {
     display: none;
 } */
+
 .slider-caption{
     position: absolute;
-    top: 50%;
+    top: 49%;
     right: 150px;
     transform: translateY(-50%);
     text-align: left;
@@ -279,9 +280,10 @@ button.place-order:hover {
     display: flex;
 }
 .works-image {
-    margin-top: 100px;
+    margin-top: 150px;
     margin-left: 10px;
     width: 65%;
+    margin-bottom: 100px;
     /* transform: translateX(-100%); */
   }
   
@@ -310,8 +312,9 @@ button.place-order:hover {
     left: 0;
 }
 .feedback{
-    margin-top: 70px;
+    margin-top: 150px;
     margin-right: 20px;
+    margin-bottom: 100px;
     width: 35%;
     display: flex;
     flex-direction: column;
@@ -343,7 +346,7 @@ button.place-order:hover {
 .feedback h1{
     font-size: 35px;
     font-weight: bolder;
-    color: #f8c09b;
+    color: #e96914;
 }
 .form-control{
     width: 400px;
@@ -383,6 +386,7 @@ button.place-order:hover {
 
 
 .footer {
+    /* margin-top: 300px; */
     position: relative;
     width: 100%;
     background: #3586ff;
