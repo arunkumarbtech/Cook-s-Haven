@@ -27,19 +27,72 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="navdiv">
-            <a href="/html/index.html"><img class="logo" src="/images/file.png" alt=""/></a>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Join Us</a></li>
-                <li><a href="#">Contact</a></li>
-                <button class="place-order" onclick="openLoginPage()">Login</button>
-                <button class="place-order" onclick="openPlaceOrderPage()" >Place Order <i class="fa-solid fa-arrow-right"></i></button>
-            </ul>
+  <nav class="navbar">
+    <div class="navdiv">
+      <a href="../html/index.html"><img class="logo" src="../images/file.png" alt="" /></a>
+      <ul>
+        <li><a href="../html/index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Join Us <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#homeChefModal" >Home Chef</a></li>
+            <li><a class="dropdown-item" href="#">Delivery Partner</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+        <button class="place-order" onclick="openLoginPage()">Login</button>
+        <button class="place-order" onclick="openPlaceOrderPage()">Place Order <i
+            class="fa-solid fa-arrow-right"></i></button>
+      </ul>
+    </div>
+  </nav>
+
+  
+   <!-- Modal for Home Chef Registration -->
+  <div id="homeChefModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 style="font-size: 28px" class="modal-title">Home Chef Registration</h4>
+          <span class="close" data-dismiss="modal">&times;</span>
         </div>
-    </nav>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" class="form-controls" id="name" placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-controls" id="email" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" class="form-controls" id="phonenumber" placeholder="Enter phone number" maxlength="10" pattern="\d{10}">
+            </div>
+
+            <div class="form-group">
+              <label for="phone">OTP</label>
+              <div id="otp-label" >
+                <input type="tel" class="form-controls" id="otp" placeholder="Enter OTP">
+                <div class="getotp">
+                  <button class="disabled" id="getotp" disabled>Get otp</button>
+                </div>
+              </div>
+            </div>
+            <div class="register-btn">
+              <button type="button" class="form-controls">Register</button>
+            </div>
+            <div class="register-login">
+              <h4>Already Registered?
+                <a href="../html/login.html">Login</a></h4>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
     <div class="header-slider">
         
      <div class="slideshow-container">
