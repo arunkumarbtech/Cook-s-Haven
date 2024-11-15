@@ -1,4 +1,4 @@
-package com.cookshaven.cookshaven;
+package com.cookshaven.cookshaven.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,10 +9,6 @@ public class HomeController {
         return "index";
     }
 
-    @GetMapping("/login")
-    public String showLoginPage(){
-        return "login";
-    }
 
     @GetMapping("/orderpage")
     public String showOrderPage(){

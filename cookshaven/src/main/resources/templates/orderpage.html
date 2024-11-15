@@ -20,9 +20,9 @@
 <body>
   <nav class="navbar">
     <div class="navdiv">
-      <a href="../html/orderpage.html"><img class="logo" src="../images/file.png" alt="" /></a>
+      <a href="../orderpage.html"><img class="logo" src="../images/file.png" alt="" /></a>
       <ul>
-        <li><a href="../html/index.html">Home</a></li>
+        <li><a href="../index.html">Home</a></li>
         <li><a href="#">About</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Join Us <span class="caret"></span></a>
@@ -32,6 +32,7 @@
           </ul>
         </li>
         <li><a href="#">Contact</a></li>
+        <li class="user-icon"><a href=""><i class="fa-regular fa-user" style="font-size:24px"></i></a></li><span th:text="${username}">Username</span>
         <button class="login" onclick="openLogin()">Login</button>
         <li><a href=""><i class="fa fa-shopping-cart" style="font-size:24px"></i></a></li>
       </ul>
@@ -76,7 +77,7 @@
             </div>
             <div class="register-login">
               <h4>Already Registered?
-                <a href="../html/login.html">Login</a>
+                <a href="../login.html">Login</a>
               </h4>
             </div>
           </form>
