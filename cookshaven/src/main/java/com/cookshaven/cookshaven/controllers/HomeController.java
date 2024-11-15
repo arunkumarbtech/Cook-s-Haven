@@ -9,10 +9,6 @@ public class HomeController {
         return "index";
     }
 
-    @GetMapping("/login")
-    public String showLoginPage(){
-        return "login";
-    }
 
     @GetMapping("/orderpage")
     public String showOrderPage(){
