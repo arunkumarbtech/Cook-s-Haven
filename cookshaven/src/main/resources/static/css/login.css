@@ -203,3 +203,17 @@ body{
 .container.active .toggle-right{
     transform: translateX(200%);
 }
+
+.modal-content{
+    border-radius: 30px !important;
+}
+
+.modal-dialog{
+    width: 30% !important;
+}
+
+.modal-success-btn{
+    width: 60px;
+    background-color: #14A44D !important;
+    color: white !important;
+}

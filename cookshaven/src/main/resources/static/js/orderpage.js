@@ -77,6 +77,6 @@ mobileNumberInput.addEventListener('input', function () {
 });
 
 function openLogin(){
-    window.location.href = '../html/login.html';
+    window.location.href = '/login';
 }
 

@@ -120,3 +120,12 @@ mobileNumberInput.addEventListener('input', function () {
 //     })
 //     .catch(error => console.error('Error loading modal:', error));
 // });
+
+document.getElementById('aboutButton').addEventListener('click', function() {
+  document.getElementById('footer').scrollIntoView({ behavior: 'smooth' });
+});
+
+document.getElementById('homeButton').addEventListener('click', function() {
+  window.scrollIntoView({ top: 0, behavior: 'smooth' });
+});
+
