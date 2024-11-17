@@ -95,32 +95,6 @@ mobileNumberInput.addEventListener('input', function () {
   getOtpBtn.disabled = !isValid;
 });
 
-// // Get the modal container
-// const modalContainer = document.getElementById('modalContainer');
-
-// // When the dropdown link is clicked, load the external HTML file
-// document.getElementById('openModalLink').addEventListener('click', function (e) {
-//   e.preventDefault();
-
-//   // Fetch modal content from 'modal.html' and load it into modalContainer
-//   fetch('chiefregister.html')
-//     .then(response => response.text())
-//     .then(data => {
-//       modalContainer.innerHTML = data;
-
-//       // Display the modal
-//       const modal = document.getElementById('homeChefModal');
-//       modal.style.display = 'block';
-
-//       // Close the modal when the user clicks the 'X' button
-//       const closeButton = document.querySelector('.close');
-//       closeButton.addEventListener('click', function () {
-//         modal.style.display = 'none';
-//       });
-//     })
-//     .catch(error => console.error('Error loading modal:', error));
-// });
-
 document.getElementById('aboutButton').addEventListener('click', function() {
   document.getElementById('footer').scrollIntoView({ behavior: 'smooth' });
 });

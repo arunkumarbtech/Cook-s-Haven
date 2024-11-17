@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.cookshaven.cookshaven.models.User;
 import com.cookshaven.cookshaven.services.UserService;
 
+import jakarta.servlet.http.HttpSession;
+
 @Controller
 public class UserController {
 
@@ -21,7 +23,7 @@ public class UserController {
 
     @Autowired
     private UserService userService;
-    
+
     //method to save signup data
     @PostMapping("/register")
     public String registerUser(@ModelAttribute User user) {
@@ -29,22 +31,42 @@ public class UserController {
         return "redirect:/login?success=true"; // Redirect with success parameter
     }
 
+    // // Method to process login data
+    // @PostMapping("/signin")
+    // public String loginUser(@RequestParam("email") String email, 
+    //                         @RequestParam("password") String password, 
+    //                         Model model) {
+    //     // Check if the user exists with matching email and password
+    //     User user = userService.findByEmailAndPassword(email, password);
+    //     if (user != null) {
+    //         // Login successful
+    //         model.addAttribute("username", user.getName());
+    //         return "redirect:/orderpage"; // redirect to a logged-in homepage
+    //     } else {
+    //         // Login failed
+    //         model.addAttribute("error", "Invalid email or password");
+    //         return "login"; // reloads the sign-in page with an error message
+    //     }
+    // }
+
+    
     // Method to process login data
     @PostMapping("/signin")
-    public String loginUser(@RequestParam("email") String email, 
-                            @RequestParam("password") String password, 
-                            Model model) {
+    public String loginUser(@RequestParam("email") String email,
+            @RequestParam("password") String password,
+            HttpSession session,
+            Model model) {
         // Check if the user exists with matching email and password
         User user = userService.findByEmailAndPassword(email, password);
         if (user != null) {
-            // Login successful
-            model.addAttribute("username", user.getName());
-            return "redirect:/orderpage"; // redirect to a logged-in homepage
+            // Login successful: Store user details in the session
+            session.setAttribute("username", user.getName()); // Save the user's name in the session
+            return "redirect:/orderpage"; // Redirect to orderpage
         } else {
-            // Login failed
+            // Login failed: Add an error message to the model
             model.addAttribute("error", "Invalid email or password");
-            return "login"; // reloads the sign-in page with an error message
+            return "login"; // Reload the login page with an error message
         }
     }
-    
+
 }

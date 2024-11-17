@@ -22,8 +22,8 @@
     <div class="navdiv">
       <a href="../orderpage.html"><img class="logo" src="../images/file.png" alt="" /></a>
       <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="#">About</a></li>
+        <li><a onclick="openHomepage()">Home</a></li>
+        <li><a id="aboutButton" href="#">About</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Join Us <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -32,9 +32,15 @@
           </ul>
         </li>
         <li><a href="#">Contact</a></li>
-        <li class="user-icon"><a href=""><i class="fa-regular fa-user" style="font-size:24px"></i></a></li><span th:text="${username}">Username</span>
-        <button class="login" onclick="openLogin()">Login</button>
-        <li><a href=""><i class="fa fa-shopping-cart" style="font-size:24px"></i></a></li>
+        <li class="user-icon" th:if="${username != null}">
+          <a style="margin-right: 1px; padding-right: 2px;" href="">
+            <i class="fa-regular fa-user" style="font-size:24px">
+            </i>
+          </a>
+          <span class="username-text" th:text="${username}">Username</span>
+        </li>
+        <button class="login" onclick="openLogin()" th:if="${username == null}">Login</button>
+        <li><a class="cart-logo" href=""><i class="fa fa-shopping-cart" style="font-size:24px"></i></a></li>
       </ul>
     </div>
   </nav>
@@ -687,7 +693,7 @@
     </div>
   </div>
 
-  <footer class="footer">
+  <footer id="footer" class="footer">
     <div class="waves">
       <div class="wave" id="wave1"></div>
       <div class="wave" id="wave2"></div>

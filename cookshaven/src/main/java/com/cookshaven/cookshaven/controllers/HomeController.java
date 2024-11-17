@@ -10,8 +10,4 @@ public class HomeController {
     }
 
 
-    @GetMapping("/orderpage")
-    public String showOrderPage(){
-        return "orderpage";
-    }
 }

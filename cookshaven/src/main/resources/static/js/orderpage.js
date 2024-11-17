@@ -80,3 +80,11 @@ function openLogin(){
     window.location.href = '/login';
 }
 
+function openHomepage(){
+    window.location.href = '/home';
+}
+
+
+document.getElementById('aboutButton').addEventListener('click', function() {
+    document.getElementById('footer').scrollIntoView({ behavior: 'smooth' });
+  });
