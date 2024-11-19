@@ -10,4 +10,8 @@ public class HomeController {
     }
 
 
+    @GetMapping("/registration")
+    public String showRegistrationPage(){
+        return "registration";
+    }
 }

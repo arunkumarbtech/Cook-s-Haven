@@ -88,3 +88,20 @@ function openHomepage(){
 document.getElementById('aboutButton').addEventListener('click', function() {
     document.getElementById('footer').scrollIntoView({ behavior: 'smooth' });
   });
+
+  function getOtp() {
+    const phoneNumber = document.getElementById("phonenumber").value;
+    if (!phoneNumber || !/^\d{10}$/.test(phoneNumber)) {
+        alert("Please enter a valid 10-digit phone number.");
+        return;
+    }
+
+    fetch("http://localhost:8080/api/v1/otp/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: `mobileNumber=${encodeURIComponent(phoneNumber)}`
+    })
+    .then(response => response.text())
+    .then(data => alert(data))
+    .catch(error => console.error("Error:", error));
+}
