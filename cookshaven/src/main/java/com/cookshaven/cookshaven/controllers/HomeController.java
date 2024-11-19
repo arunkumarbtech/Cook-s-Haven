@@ -14,10 +14,6 @@ public class HomeController {
     public String showOrderPage(){
         return "orderpage";
     }
-
-
-    @GetMapping("registration")
-    public String showRegsitrationPage(){
-        return "registration";
-    }
+   
 }
+        

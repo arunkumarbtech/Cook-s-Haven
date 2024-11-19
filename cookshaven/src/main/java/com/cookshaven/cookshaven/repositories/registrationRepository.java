@@ -1,5 +1,9 @@
 package com.cookshaven.cookshaven.repositories;
 
-public class registrationRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.cookshaven.cookshaven.models.registration;
+
+public interface  registrationRepository extends JpaRepository<registration, Long>{
     
 }

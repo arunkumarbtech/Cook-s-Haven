@@ -11,15 +11,12 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name="registration")
-
-
-
-public class registeration {
+public class registration {
     @Id
-   @ GeneratedValue(strategy =GenerationType.IDENTITY)
+   @GeneratedValue(strategy =GenerationType.IDENTITY)
     private long id;
 
-    private String cooksName;
+    private String cooks_name;
     private String gender;
     private Date dob;
     private String FathersName;
@@ -185,14 +182,6 @@ public void setWorkingDays(String workingDays) {
 }
 
 
-    public String getCooksName() {
-        return cooksName;
-    }
-
-    public void setCooksName(String cooksNname) {
-        this.cooksName = cooksNname;
-    }
-
     public String getGender() {
         return gender;
     }
@@ -218,6 +207,14 @@ public void setWorkingDays(String workingDays) {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public String getCooks_name() {
+        return cooks_name;
+    }
+
+    public void setCooks_name(String cooks_name) {
+        this.cooks_name = cooks_name;
     }
     
     

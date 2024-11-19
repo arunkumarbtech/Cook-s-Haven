@@ -1,6 +1,6 @@
 create table registration(
     cook_id  int auto_increment primaery KEY,
-    cook_name  varchar(50) not null,
+    cooksName  varchar(50) not null,
     gender varchar(20) not null,
     Date_of_Birth DATE not null,
     fathers_name varchar(50) not null,
