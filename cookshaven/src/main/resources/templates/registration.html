@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="../css/registration.css">
 </head>
 <body>
     <h1 class="reg-head">Registration for cook</h1>
@@ -16,15 +16,15 @@
             <input type="text" id="name" required>
           
             <label for="male">
-                <input type="radio" name="gender" id="male" value="male">
+                <input type="radio" name="gender" id="male" value="male" required>
                 Male
             </label>
             <label for="female">
-                <input type="radio" name="gender" id="female" value="female">
+                <input type="radio" name="gender" id="female" value="female" required>
                 Female
             </label>
             <label for="other">
-                <input type="radio" name="gender" id="other" value="other">
+                <input type="radio" name="gender" id="other" value="other" required>
                 Other
             </label>
         
@@ -199,32 +199,32 @@
             <div id="cuisine-options">
                 <div class="cuisine-option">
                     <label for="indian">
-                        <input type="checkbox" id="indian" name="cuisine" value="Indian"> Indian
+                        <input type="checkbox" id="indian" name="cuisine" value="Indian" required> Indian
                     </label>
                 </div>
                 <div class="cuisine-option">
                     <label for="italian">
-                        <input type="checkbox" id="italian" name="cuisine" value="Italian"> Italian
+                        <input type="checkbox" id="italian" name="cuisine" value="Italian" required> Italian
                     </label>
                 </div>
                 <div class="cuisine-option">
                     <label for="chinese">
-                        <input type="checkbox" id="chinese" name="cuisine" value="Chinese"> Chinese
+                        <input type="checkbox" id="chinese" name="cuisine" value="Chinese" required> Chinese
                     </label>
                 </div>
                 <div class="cuisine-option">
                     <label for="thai">
-                        <input type="checkbox" id="thai" name="cuisine" value="Thai"> Thai
+                        <input type="checkbox" id="thai" name="cuisine" value="Thai" required> Thai
                     </label>
                 </div>
                 <div class="cuisine-option">
                     <label for="mexican">
-                        <input type="checkbox" id="mexican" name="cuisine" value="Mexican"> Mexican
+                        <input type="checkbox" id="mexican" name="cuisine" value="Mexican" required> Mexican
                     </label>
                 </div>
                 <div class="cuisine-option">
                     <label for="others">
-                        <input type="checkbox" id="others" name="cuisine" value="Others"> Others
+                        <input type="checkbox" id="others" name="cuisine" value="Others" required> Others
                     </label>
 
                 </div>
@@ -242,7 +242,7 @@
     </div>
 
 </div>
-    <script src="script1.js"></script>
+    <script src="../js/registration.js"></script>
 </body>
 
 </html>
