@@ -21,11 +21,11 @@ public class registrationController {
     @Autowired
     private registrationService regService;
 
-    @PostMapping("/registrationCook")
+    @PostMapping("/registration")
     public String registerCook(@ModelAttribute("reg") registration reg, Model model) {
         regService.saveRegistration(reg);
         model.addAttribute("message", "Registration successful!");
-        return "successPage";
+        return "redirect:/orderpage";
     }
 
 }

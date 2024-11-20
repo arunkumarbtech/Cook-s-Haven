@@ -70,6 +70,12 @@ document.querySelectorAll('button[id^="back-"]').forEach((btn) => {
 });
 
 document.getElementById('submit')?.addEventListener('click', () => {
-    alert('Form submitted successfully!');
+    const form = steps[currentStep].querySelector('form');
+    if (form.checkValidity()) {
+        alert('Form submitted successfully!');
+    } else {
+        form.reportValidity(); // Highlight missing fields
+    }
+   
     // Handle form submission logic here
 });

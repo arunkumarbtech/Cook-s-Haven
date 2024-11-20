@@ -3,6 +3,8 @@ package com.cookshaven.cookshaven.models;
 
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,8 +20,9 @@ public class registration {
 
     private String cooks_name;
     private String gender;
+     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date dob;
-    private String FathersName;
+    private String fathers_name;
     private String email;
     private String phoneNumber;
     private String streetAddress;
@@ -27,9 +30,9 @@ public class registration {
    private String state;
    private String pincode;
    private String country;
-   private String aadharNumber;
-   private String panNUmber;
-   private String bankAccountName;
+   private String aadhar_number;
+  private String pannumber;
+  private String bankAccountName;
    private String accountNumber;
    private String ifscCode;
    private String branchName;
@@ -37,13 +40,6 @@ public class registration {
    private String abountMe;
    private String experience;
    private String workingDays;
-   public String getFathersName() {
-    return FathersName;
-}
-
-public void setFathersName(String fathersName) {
-    FathersName = fathersName;
-}
 
 public String getEmail() {
     return email;
@@ -63,6 +59,24 @@ public void setPhoneNumber(String phoneNumber) {
 
 public String getStreetAddress() {
     return streetAddress;
+}
+
+public String getPannumber() {
+    return pannumber;
+}
+
+
+public void setPannumber(String pannumber) {
+    this.pannumber = pannumber;
+}
+
+
+public String getFathers_name() {
+    return fathers_name;
+}
+
+public void setFathers_name(String fathers_name) {
+    this.fathers_name = fathers_name;
 }
 
 public void setStreetAddress(String streetAddress) {
@@ -101,21 +115,15 @@ public void setCountry(String country) {
     this.country = country;
 }
 
-public String getAadharNumber() {
-    return aadharNumber;
+public String getAadhar_number() {
+    return aadhar_number;
 }
 
-public void setAadharNumber(String aadharNumber) {
-    this.aadharNumber = aadharNumber;
+public void setAadhar_number(String aadhar_number) {
+    this.aadhar_number = aadhar_number;
 }
 
-public String getPanNUmber() {
-    return panNUmber;
-}
 
-public void setPanNUmber(String panNUmber) {
-    this.panNUmber = panNUmber;
-}
 
 public String getBankAccountName() {
     return bankAccountName;
