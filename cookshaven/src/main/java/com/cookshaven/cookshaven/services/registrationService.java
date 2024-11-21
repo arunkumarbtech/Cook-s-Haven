@@ -1,5 +1,7 @@
 package com.cookshaven.cookshaven.services;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,5 +18,8 @@ public class registrationService {
     public registration saveRegistration(registration registration) {
         System.out.println("Service reached" + registration);
         return registrationRepository.save(registration);
+    }
+    public Optional<registration> findById(Long id) {
+        return registrationRepository.findById(id);
     }
 }

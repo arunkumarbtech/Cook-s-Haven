@@ -1,281 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registration Form</title>
     <link rel="stylesheet" href="../css/registration.css">
 </head>
-
 <body>
-    <h1 class="reg-head">Registration for cook</h1>
- 
-    <div id="form-container" >
-        <div class="form-step active" id="step-1">
-            <form  id="personal-details-form" method="post" action="/registration">
-              <div class="form-heading">
-                   <h2 >Personal Details</h2>
-               </div>
 
-                <label for="cooksname">Name</label>
-                <input type="text" id="cooksname" name="cooksname">
+    <div class="container">
+        <!-- Background Image -->
+        <div class="background"></div>
 
-                <label for="male">
-                    <input type="radio" name="gender" id="gender" value="male">
-                    Male
-                </label>
-                <label for="female">
-                    <input type="radio" name="gender" id="gender" value="female">
-                    Female
-                </label>
-                <label for="other">
-                    <input type="radio" name="gender" id="gender" value="other">
-                    Other
-                </label>
-
-                <label for="fathersName">Father's Name</label>
-                <input type="text" id="fathersName" name="fathers_name">
-
-
-                <label for="dob">Date of Birth</label>
-                <input type="date" id="dob" name="dob">
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email">
-
-                <label for="phone">Phone</label>
-                <input type="tel" id="phone" name="phone_number">
-
-            
-            <div class="form-buttons">
-                <button id="back-1"  disabled>Back</button>
-                <button id="next-1" >Next</button>
-            </div>
-        </form>
-        </div>
-
-        <div class="form-step active" id="step-2">
-            <form  id="address-form" action="/registration" method="post">
-                    <div class="form-heading">
-                       <h2>Address Details</h2>
-                    </div>
-                <label for="street">Street Address</label>
-                <input type="text" id="streetAddress" name="street_address" placeholder="123 Main St">
-
-                <label for="city">City</label>
-                <input type="text" id="city" name="city" placeholder="Enter your city">
-
-                <label for="state">State</label>
-                <input type="text" id="state" name="state" placeholder="Enter your state">
-
-                <label for="zip">ZIP Code</label>
-                <input type="text" id="pincode" name="pincode" placeholder="12345">
-
-                <label for="country">Country</label>
-                <input type="text" id="country" name="country" placeholder="Enter your country">
-           
-
-            <div class="form-buttons">
-                <button id="back-2" >Back</button>
-                <button id="next-2" >Next</button>
-            </div>
-
-        </form>
-        </div>
-
-        <div class="form-step" id="step-3">
-            <form  id="document-form" method="post" action="/registration">
-                <div class="form-heading">
-                    <h2 >Upload Documents & Identity Verification</h2>
-                </div> 
-                <!-- Photo Upload -->
-                <label for="profile-photo">Upload Your Photo</label>
-                <input type="file" id="profile-photo" name="profile-photo" accept="image/*">
-
-                <!-- Aadhaar Card Number -->
-                <label for="aadhaar-number">Aadhaar Card Number</label>
-                <input type="text" id="aadhaar-number" name="aadhaar_number" placeholder="Enter your Aadhaar number"
-                >
-
-                <!-- PAN Card Number -->
-                <label for="pan-number">PAN Card Number</label>
-                <input type="text" id="pan-number" name="pannumber" placeholder="Enter your PAN number">
-
-                <!-- Verified Document Upload -->
-                <label for="verified-document">Upload Verified Document (Aadhaar or PAN)</label>
-                <input type="file" id="verified-document" name="verified-document" accept=".pdf,.jpg,.jpeg,.png"
-                >
-            
-            <div class="form-buttons">
-                <button id="back-3" >Back</button>
-                <button id="next-3" >Next</button>
-            </div>
-        </form>
-        </div>
-
-        <div class="form-step" id="step-4">
-
-            <form  id="bank-details-form" method="post" action="/registration">
-                <div class="form-heading">
-                    <h2>Bank Details</h2>
-                </div>
-            
-                <!-- Account Holder's Name -->
-                <label for="account-holder-name">Account Holder's Name</label>
-                <input type="text" id="account-holder-name" name="account-holder-name"
-                    placeholder="Enter the account holder's name">
-
-                <!-- Bank Account Number -->
-                <label for="account-number">Bank Account Number</label>
-                <input type="text" id="account-number" name="account_number" placeholder="Enter your account number"
-                >
-
-                <!-- Confirm Account Number -->
-                <label for="confirm-account-number">Confirm Account Number</label>
-                <input type="text" id="confirm-account-number" name="confirm-account-number"
-                    placeholder="Re-enter your account number">
-
-                <!-- IFSC Code -->
-                <label for="ifsc-code">IFSC Code</label>
-                <input type="text" id="ifsc-code" name="ifsc_code" placeholder="Enter your bank's IFSC code">
-
-                <!-- Bank Name -->
-                <label for="bank-name">Bank Name</label>
-                <select id="bank-name" name="bank_account_name">
-                    <option value="" disabled selected>Select your bank</option>
-                    <option value="State Bank of India">State Bank of India</option>
-                    <option value="HDFC Bank">HDFC Bank</option>
-                    <option value="ICICI Bank">ICICI Bank</option>
-                    <option value="Punjab National Bank">Punjab National Bank</option>
-                    <option value="Axis Bank">Axis Bank</option>
-                    <option value="Kotak Mahindra Bank">Kotak Mahindra Bank</option>
-                    <option value="Bank of Baroda">Bank of Baroda</option>
-                    <option value="Canara Bank">Canara Bank</option>
-                    <option value="Other">Other</option>
-                </select>
-
-                <!-- Other Bank Name Input -->
-                <div id="other-bank-name-container" style="display: none;">
-                    <label for="other-bank-name">Please Specify Your Bank Name</label>
-                    <input type="text" id="other-bank-name" name="bank_account_name" placeholder="Enter your bank name">
-                </div>
-
-                <!-- Branch Name -->
-                <label for="branch-name">Branch Name</label>
-                <input type="text" id="branch-name" name="branch-name" placeholder="Enter your branch name">
-                <div class="form-buttons">
-                    <button id="back-4" >Back</button>
-                    <button id="next-4">Next</button>
+        <!-- Form Container -->
+ <form action="/registration" method="POST">
+      <div class="form-container">
+            <h2>Personal Details</h2>
+                <div class="input-group">
+                    <label for="cooksname">Full Name</label>
+                    <input type="text" id="cooksname" name="cooksname" required>
                 </div>
                 
-            </form>
+                <div class="input-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="father_name">Father's Name</label>
+                    <input type="text" id="father_name" name="father_name" required>
+                </div>
 
-        </div>
-
-        <div class="form-step" id="step-5">
-
-          <form  id="kitchen-profile-form" action="/registration" method="post">
-            <div class="form-heading">
-                <h2>Kitchen Profile</h2>
+                <div class="input-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="phone_number">Phone</label>
+                    <input type="tel" id="phone_number" name="phone_number" required>
+                </div>
             </div>
-                <!-- Kitchen Name -->
-                <label for="kitchen-name">Kitchen Name</label>
-                <input type="text" id="kitchen-name" name="kitchen_name" placeholder="Enter your kitchen name">
-
-                <!-- Profile Photo -->
-                <label for="profile-photo">Profile Photo</label>
-                <input type="file" id="profile-photo" name="profile-photo" accept="image/*">
-
-                <!-- About Me -->
-                <label for="about-me">About Me</label>
-                <textarea id="about-me" name="abount_me" placeholder="Tell us about yourself and your kitchen" rows="4"
-                ></textarea>
-
-                <!-- Years of Experience -->
-                <label for="experience">Years of Experience in Cooking</label>
-                <select id="experience" name="experience">
-                    <option value="" disabled selected>Select your experience</option>
-                    <option value="2">2 Years</option>
-                    <option value="3">3 Years</option>
-                    <option value="4">4 Years</option>
-                    <option value="5+">5+ Years</option>
-                    <option value="10+">10+ Years</option>
-                </select>
-
-                <!-- Working Days -->
-                <label for="working-days">How many days will you be working in a week?</label>
-                <select id="working-days" name="working_days">
-                    <option value="" disabled selected>Select the number of days</option>
-                    <option value="3 days">3 Days</option>
-                    <option value="4 days">4 Days</option>
-                    <option value="5 days">5 Days</option>
-                    <option value="6 days">6 Days</option>
-                    <option value="7 days">7 Days</option>
-                </select>
-
-                <!-- Operating Hours -->
-                <label for="opening-time">Operating Hours</label>
-                <div class="operating-hours">
-                    <div>
-                        <label for="opening-time">Opening Time</label>
-                        <input type="time" id="opening-time" name="opening-time">
-                    </div>
-                    <div>
-                        <label for="closing-time">Closing Time</label>
-                        <input type="time" id="closing-time" name="closing-time">
-                    </div>
+      <div class="form-container">
+            <h2>Address Details</h2>
+                <div class="input-group">
+                    <label for="street_address">Street Address</label>
+                    <input type="text" id="street_address" name="street_address" placeholder="123 Main St" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" placeholder="Enter your city" required>
+                </div>
+                <div class="input-group">
+                    <label for="zip">ZIP Code</label>
+                    <input type="text" id="pincode-address" name="pincode" placeholder="12345" required>
+                </div>
+                <div class="input-group">
+                   <label for="state">State</label>
+                    <input type="text" id="state" name="state" placeholder="Enter your state">
+    
                 </div>
 
-                <!-- Cuisine Specialization -->
-                <div id="cuisine-options">
-                    <div class="cuisine-option">
-                        <label for="indian">
-                            <input type="checkbox" id="indian" name="cuisine" value="Indian"> Indian
-                        </label>
-                    </div>
-                    <div class="cuisine-option">
-                        <label for="italian">
-                            <input type="checkbox" id="italian" name="cuisine" value="Italian"> Italian
-                        </label>
-                    </div>
-                    <div class="cuisine-option">
-                        <label for="chinese">
-                            <input type="checkbox" id="chinese" name="cuisine" value="Chinese"> Chinese
-                        </label>
-                    </div>
-                    <div class="cuisine-option">
-                        <label for="thai">
-                            <input type="checkbox" id="thai" name="cuisine" value="Thai"> Thai
-                        </label>
-                    </div>
-                    <div class="cuisine-option">
-                        <label for="mexican">
-                            <input type="checkbox" id="mexican" name="cuisine" value="Mexican"> Mexican
-                        </label>
-                    </div>
-                    <div class="cuisine-option">
-                        <label for="others">
-                            <input type="checkbox" id="others" name="cuisine" value="Others"> Others
-                        </label>
+                <div class="input-group">
+                    <label for="country">Country</label>
+                    <input type="text" id="country" name="country" placeholder="Enter your country" required>
+                </div>
+              </div>
+      <div class="form-container">
+            <h2>Upload Documents & Identity Verification</h2>
+                <div class="input-group">
+                    <label for="profile-photo">Upload Your Photo</label>
+                    <input type="file" id="profile-photo" name="profile-photo" accept="image/*" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="aadhar_number">Aadhaar Card Number</label>
+                    <input type="text" id="aadhar_number" name="aadhar_number" placeholder="Enter your Aadhaar number"
+                        required>
+                </div>
+                <div class="input-group">
+                    <label for="pan-number">PAN Card Number</label>
+                    <input type="text" id="pan-number" name="pannumber" placeholder="Enter your PAN number" required>
+                </div>
 
-                    </div>
-                    <div id="other-cuisine-container" style="display: none;">
-                        <label for="other-cuisine">Please Specify Other Cuisine</label>
-                        <input type="text" id="other-cuisine" name="other-cuisine" placeholder="Enter the cuisine">
-                    </div>
+                <div class="input-group">
+                    <label for="verified-document">Upload Verified Document (Aadhaar or PAN)</label>
+                    <input type="file" id="verified-document" name="verified-document" accept=".pdf,.jpg,.jpeg,.png"
+                        required>>
                 </div>
-                <div class="form-buttons">
-                    <button id="back-5" >Back</button> 
-                    <button type="submit" id="submit">submit</button>   
+              </div>
+      <div class="form-container">
+            <h2>Bank Details</h2>
+                <div class="input-group">
+                    <label for="bank_account_name">Account Holder's Name</label>
+                    <input type="text" id="bank_account_name" name="bank_account_name"
+                        placeholder="Enter the account holder's name" required>
                 </div>
+                
+                <div class="input-group">
+                    <label for="account-number">Bank Account Number</label>
+                    <input type="text" id="account-number" name="account_number" placeholder="Enter your account number" >
+                </div>
+                <div class="input-group">
+                    <label for="ifsc_code">IFSC Code</label>
+                    <input type="text" id="ifsc_code" name="ifsc_code" placeholder="Enter your bank's IFSC code">
+                </div>
+
+                <div class="input-group">
+                    <label for="bank-name">Bank Name</label>
+                    <select id="bank-name" name="bank_name">
+                        <option value="" disabled selected>Select your bank</option>
+                        <option value="State Bank of India">State Bank of India</option>
+                        <option value="HDFC Bank">HDFC Bank</option>
+                        <option value="ICICI Bank">ICICI Bank</option>
+                        <option value="Punjab National Bank">Punjab National Bank</option>
+                        <option value="Axis Bank">Axis Bank</option>
+                        <option value="Kotak Mahindra Bank">Kotak Mahindra Bank</option>
+                        <option value="Bank of Baroda">Bank of Baroda</option>
+                        <option value="Canara Bank">Canara Bank</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="branch_name">Branch Name</label>
+                    <input type="text" id="branch_name" name="branch_name" placeholder="Enter your branch name">                   
+              </div>
+      </div>
+      <div class="form-container">
+            <h2>Kitchen Details</h2>
+                <div class="input-group">
+                    <label for="kitchen-name">Kitchen Name</label>
+                    <input type="text" id="kitchen-name" name="kitchen_name" placeholder="Enter your kitchen name" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="about-me">About Me</label>
+                    <input type="text" id="about-me" name="abount_me" placeholder="Tell us about yourself and your kitchen" required>
+                </div>
+                <div class="input-group">
+                    <label for="kitchen_profile">Profile Photo</label>
+                    <input type="file" id="kitchen_profile" name="kitchen_profile" accept="image/*">    
+                </div>
+                <div class="input-group">
+                    <label for="working-days">How many days will you be working in a week?</label>
+                    <select id="working-days" name="workingdays">
+                        <option value="" disabled selected>Select the number of days</option>
+                        <option value="3 days">3 Days</option>
+                        <option value="4 days">4 Days</option>
+                        <option value="5 days">5 Days</option>
+                        <option value="6 days">6 Days</option>
+                        <option value="7 days">7 Days</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="experience">Years of Experience in Cooking</label>
+                    <select id="experience" name="experience">
+                        <option value="" disabled selected>Select your experience</option>
+                        <option value="2">2 Years</option>
+                        <option value="3">3 Years</option>
+                        <option value="4">4 Years</option>
+                        <option value="5+">5+ Years</option>
+                        <option value="10+">10+ Years</option>
+                    </select>
+                </div>   
+            </div>
+                <button type="submit">Submit</button>
             </form>
-
-        </div>
-
+        
     </div>
 
     <script src="../js/registration.js"></script>
 </body>
-
 </html>

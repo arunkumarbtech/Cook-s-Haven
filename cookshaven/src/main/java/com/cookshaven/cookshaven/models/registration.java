@@ -8,6 +8,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
 import jakarta.persistence.Table;
 
 @Entity
@@ -17,30 +18,47 @@ public class registration {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
+    @Lob
+    private byte[] kitchen_profile;
     private String cooksname;
     private String gender;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date dob;
-    private String fathers_name;
+    private String father_name;
     private String email;
-    private String phoneNumber;
-    private String streetAddress;
+    private String phone_number;
+    private String street_address;
     private String city;
     private String state;
     private String pincode;
     private String country;
     private String aadhar_number;
     private String pannumber;
-    private String bankAccountName;
-    private String accountNumber;
-    private String ifscCode;
-    private String branchName;
-    private String kitchenName;
-    private String abountMe;
+    private String bank_account_name;
+    private String account_number;
+    private String ifsc_code;
+    private String bank_name;
+    private String branch_name;
+    private String kitchen_name;
+    private String abount_me;
     private String experience;
-    private String workingDays;
+    private String workingdays;
 
+    public String getWorkingdays() {
+        return workingdays;
+    }
+
+    public void setWorkingdays(String workingdays) {
+        this.workingdays = workingdays;
+    }
+
+    public byte[] getKitchen_profile() {
+        return kitchen_profile;
+    }
+
+    public void setKitchen_profile(byte[] kitchen_profile) {
+        this.kitchen_profile = kitchen_profile;
+    }
     public String getEmail() {
         return email;
     }
@@ -49,16 +67,21 @@ public class registration {
         this.email = email;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public String getPhone_number() {
+        return phone_number;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setPhone_number(String phone_number) {
+        this.phone_number = phone_number;
+    }
+    
+    
+    public String getFather_name() {
+        return father_name;
     }
 
-    public String getStreetAddress() {
-        return streetAddress;
+    public void setFather_name(String father_name) {
+        this.father_name = father_name;
     }
 
     public String getPannumber() {
@@ -69,17 +92,6 @@ public class registration {
         this.pannumber = pannumber;
     }
 
-    public String getFathers_name() {
-        return fathers_name;
-    }
-
-    public void setFathers_name(String fathers_name) {
-        this.fathers_name = fathers_name;
-    }
-
-    public void setStreetAddress(String streetAddress) {
-        this.streetAddress = streetAddress;
-    }
 
     public String getCity() {
         return city;
@@ -100,7 +112,15 @@ public class registration {
     public String getPincode() {
         return pincode;
     }
+     
 
+    public String getStreet_address() {
+        return street_address;
+    }
+
+    public void setStreet_address(String street_address) {
+        this.street_address = street_address;
+    }
     public void setPincode(String pincode) {
         this.pincode = pincode;
     }
@@ -121,53 +141,60 @@ public class registration {
         this.aadhar_number = aadhar_number;
     }
 
-    public String getBankAccountName() {
-        return bankAccountName;
+    public String getBank_account_name() {
+        return bank_account_name;
     }
 
-    public void setBankAccountName(String bankAccountName) {
-        this.bankAccountName = bankAccountName;
+    public void setBank_account_name(String bank_account_name) {
+        this.bank_account_name = bank_account_name;
+    }    public String getAccount_number() {
+        return account_number;
     }
 
-    public String getAccountNumber() {
-        return accountNumber;
+    public void setAccount_number(String account_number) {
+        this.account_number = account_number;
+    }
+    public String getIfsc_code() {
+        return ifsc_code;
     }
 
-    public void setAccountNumber(String accountNumber) {
-        this.accountNumber = accountNumber;
+    public void setIfsc_code(String ifsc_code) {
+        this.ifsc_code = ifsc_code;
     }
 
-    public String getIfscCode() {
-        return ifscCode;
+    public String getBank_name() {
+        return bank_name;
     }
 
-    public void setIfscCode(String ifscCode) {
-        this.ifscCode = ifscCode;
+    public void setBank_name(String bank_name) {
+        this.bank_name = bank_name;
     }
 
-    public String getBranchName() {
-        return branchName;
+    public String getBranch_name() {
+        return branch_name;
     }
 
-    public void setBranchName(String branchName) {
-        this.branchName = branchName;
+    public void setBranch_name(String branch_name) {
+        this.branch_name = branch_name;
     }
 
-    public String getKitchenName() {
-        return kitchenName;
+    public String getKitchen_name() {
+        return kitchen_name;
     }
 
-    public void setKitchenName(String kitchenName) {
-        this.kitchenName = kitchenName;
+    public void setKitchen_name(String kitchen_name) {
+        this.kitchen_name = kitchen_name;
     }
 
-    public String getAbountMe() {
-        return abountMe;
+
+    public String getAbount_me() {
+        return abount_me;
     }
 
-    public void setAbountMe(String abountMe) {
-        this.abountMe = abountMe;
+    public void setAbount_me(String abount_me) {
+        this.abount_me = abount_me;
     }
+
 
     public String getExperience() {
         return experience;
@@ -175,14 +202,6 @@ public class registration {
 
     public void setExperience(String experience) {
         this.experience = experience;
-    }
-
-    public String getWorkingDays() {
-        return workingDays;
-    }
-
-    public void setWorkingDays(String workingDays) {
-        this.workingDays = workingDays;
     }
 
     public String getGender() {
