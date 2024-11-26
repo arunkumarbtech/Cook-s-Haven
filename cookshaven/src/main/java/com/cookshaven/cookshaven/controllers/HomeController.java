@@ -7,11 +7,6 @@ public class HomeController {
     @GetMapping("/home") 
     public String showHomePage() {
         return "index";
-    }
-
-
-    @GetMapping("/registration")
-    public String showRegistrationPage(){
-        return "registration";
-    }
+    }   
 }
+        

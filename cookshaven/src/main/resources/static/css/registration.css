@@ -1,12 +1,16 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
     width: 100%;
     overflow-x: hidden;
-    height: fit-content;
+    height: 100%;
 
+}
+html {
+    font-family: Arial, sans-serif;
 }
 .reg-head {
     display: flex;
@@ -232,4 +236,109 @@ button {
     padding: 0.5rem 1rem;
     font-size: 1rem;
     cursor: pointer;
+} */
+
+.container {
+    height: 100%;
+}
+
+/* Background Image */
+.background {
+    position: fixed;  /* Keeps the image fixed in place */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;  /* This will ensure the image spans the full viewport height */
+    background: url('../images/bg\ \(2\).jfif') no-repeat center center;
+    background-size: cover;  /* Ensure the image covers the entire page */
+    z-index: -1;  /* Keeps the background behind the form */
+}
+
+/* Form Container */
+.form-container {
+    left: 10;
+    width: 40%;
+    /* margin: auto; */
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.2); /* Transparent background (glass-like) */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px); 
+    color: #fff;
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form Fields */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background: transparent;
+    color: #000000;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus, .input-group select:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 10px #4CAF50;
+}
+
+.gender {
+    display: flex;
+    justify-content: space-between;  /* Ensures the radio buttons are spaced out in a row */
+    align-items: center;
+}
+
+.gender label {
+    font-size: 16px;
+    display: inline-block;
+    margin-right: 20px;  /* Space between radio buttons */
+}
+input[type="radio"] {
+    margin-right: 5px;  /* Space between radio button and label */
+}
+/* Submit Button */
+button {
+    width: 100px;
+    padding: 12px;
+    background: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-left: 200px;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+/* Responsive Design
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%;
+    }
 } */
