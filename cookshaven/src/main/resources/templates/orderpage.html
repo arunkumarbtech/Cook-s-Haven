@@ -41,7 +41,7 @@
         </li>
         <button class="login" onclick="openLogin()" th:if="${username == null}">Login</button>
         <li><a class="cart-logo" href=""><i class="fa fa-shopping-cart"   style="font-size:24px"></i></a></li>
-        < class="cart-amount"></p>
+        <li id="cart-amount" class="cart-amount"></li>
       </ul>
     </div>
   </nav>
@@ -55,24 +55,24 @@
           <span class="close" data-dismiss="modal">&times;</span>
         </div>
         <div class="modal-body">
-          <form>
+          <form action="/cookregister" method="post">
             <div class="form-group">
               <label for="name">Full Name</label>
-              <input type="text" class="form-control" id="name" placeholder="Enter your full name">
+              <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name">
             </div>
             <div class="form-group">
               <label for="email">Email address</label>
-              <input type="email" class="form-control" id="email" placeholder="Enter email">
+              <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
             </div>
             <div class="form-group">
               <label for="phonenumber">Phone Number</label>
-              <input type="tel" class="form-control" id="phonenumber" placeholder="Enter phone number" maxlength="10"
+              <input type="tel" class="form-control" id="phonenumber" name="phonenumber" placeholder="Enter phone number" maxlength="10"
                 pattern="\d{10}">
             </div>
             <div class="form-group">
               <label for="otp">OTP</label>
               <div id="otp-label">
-                <input type="tel" class="form-control" id="otp" placeholder="Enter OTP">
+                <input type="tel" class="form-control" id="otp" name="otp" placeholder="Enter OTP">
                 <div class="getotp">
                   <button type="button" id="getotp" onclick="getOtp()" class="disabled" disabled>Get OTP</button>
                 </div>
@@ -82,7 +82,7 @@
               <button type="submit" class="form-control">Register</button>
             </div>
             <div class="register-login">
-              <h4>Already Registered? <a href="../login.html">Login</a></h4>
+              <h4 onclick="">Already Registered? <a href="../login.html">Login</a></h4>
             </div>
           </form>
         </div>

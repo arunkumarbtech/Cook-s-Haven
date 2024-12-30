@@ -23,6 +23,16 @@ function imgScrollLeft(gallery, rightButton, leftButton) {
     updateButtons(gallery, rightButton, leftButton);
 }
 
+// Get the input field and button
+const mobileNumberInput = document.getElementById('phonenumber');
+const getOtpBtn = document.getElementById('getotp');
+
+// Function to enable or disable the button based on input length
+mobileNumberInput.addEventListener('input', function () {
+  const isValid = mobileNumberInput.value.length === 10;
+  getOtpBtn.disabled = !isValid;
+});
+
 function updateButtons(gallery, rightButton, leftButton) {
     const galleryWidth = gallery.scrollWidth;
     const containerWidth = gallery.offsetParent.offsetWidth;
@@ -179,25 +189,14 @@ function getOtp() {
   .then(data => alert(data))
   .catch(error => console.error("Error:", error));
 }
-// And update your increment and decrement functions to update the corresponding .count element:
 
 
-
-
-
-
-const mobileNumberInput = document.getElementById('phonenumber');
-const getOtpBtn = document.getElementById('getotp');
-
-// Function to enable or disable the button based on input length
-mobileNumberInput.addEventListener('input', function () {
-    const isValid = mobileNumberInput.value.length === 10;
-    getOtpBtn.disabled = !isValid;
-});
 
 function openLogin(){
     window.location.href = '/login';
 }
+
+
 
 function getOtp() {
   const phoneNumber = document.getElementById("phonenumber").value;

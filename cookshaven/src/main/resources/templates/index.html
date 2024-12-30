@@ -59,25 +59,25 @@
           <span class="close" data-dismiss="modal">&times;</span>
         </div>
         <div class="modal-body">
-          <form>
+          <form action="/cookregister" method="post">
             <div class="form-group">
               <label for="name">Full Name</label>
-              <input type="text" class="form-controls" id="name" placeholder="Enter your full name">
+              <input type="text" class="form-controls" id="name" name="name" placeholder="Enter your full name">
             </div>
             <div class="form-group">
               <label for="email">Email address</label>
-              <input type="email" class="form-controls" id="email" placeholder="Enter email">
+              <input type="email" class="form-controls" id="email" name="email" placeholder="Enter email">
             </div>
             <div class="form-group">
               <label for="phone">Phone Number</label>
-              <input type="tel" class="form-controls" id="phonenumber" placeholder="Enter phone number" maxlength="10"
+              <input type="tel" class="form-controls" id="phonenumber" name="phonenumber" placeholder="Enter phone number" maxlength="10"
                 pattern="\d{10}">
             </div>
 
             <div class="form-group">
               <label for="phone">OTP</label>
               <div id="otp-label">
-                <input type="tel" class="form-controls" id="otp" placeholder="Enter OTP">
+                <input type="tel" class="form-controls" id="otp" name="otp" placeholder="Enter OTP">
                 <div class="getotp">
                   <button class="disabled" id="getotp" disabled>Get otp</button>
                 </div>
